@@ -1,0 +1,8 @@
+# OkeIniAja Dashboard Apache Configuration
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Rewrite berkas bukti transfer jika diakses langsung dari root dashboard
+    RewriteRule ^(proof_[a-zA-Z0-9_\-]+\.(jpg|jpeg|png|webp|pdf))$ uploads/proofs/$1 [L,NC]
+</IfModule>
